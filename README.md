@@ -1,2 +1,3 @@
-# dapr-workflows-tracing-java-demo
-Dapr Workflows &amp; Catalyst Tracing Demo with Java
+# Spring Boot & Dapr Workflows Tracing Example
+
+
