@@ -18,7 +18,7 @@ if [ -z "${OTEL_AUTH_TOKEN}" ]; then
   echo "  export OTEL_AUTH_TOKEN=\"Bearer <your-token>\""
 fi
 
-OTEL_ENDPOINT="https://ingress.europe-west4.gcp.dash0.com"
+OTEL_ENDPOINT="https://ingress.eu-west-1.aws.dash0.com"
 
 # Run with auto-instrumentation
 mvn spring-boot:test-run \

@@ -18,7 +18,7 @@ if [ -z "${OTEL_AUTH_TOKEN}" ]; then
   echo "  export OTEL_AUTH_TOKEN=\"Bearer <your-token>\""
 fi
 
-OTEL_ENDPOINT="https://ingress.europe-west4.gcp.dash0.com"
+OTEL_ENDPOINT="https://ingress.eu-west-1.aws.dash0.com"
 
 # Run with auto-instrumentation
 diagrid dev run --project spring-boot --app-id workflows --app-port 8080 -- mvn spring-boot:run \
