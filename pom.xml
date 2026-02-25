@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>4.0.2</version>
+    <version>4.0.3</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>io.diagrid</groupId>
@@ -15,7 +15,7 @@
   <description>Spring Boot &amp; Dapr Workflows Tracing</description>
   <properties>
     <java.version>21</java.version>
-    <dapr.version>1.17.0-rc-3</dapr.version>
+    <dapr.version>1.17.0-rc-4</dapr.version>
 <!--    <dapr.version>1.18.0-SNAPSHOT</dapr.version>-->
   </properties>
   <dependencies>
@@ -30,7 +30,7 @@
     <dependency>
       <groupId>io.opentelemetry.instrumentation</groupId>
       <artifactId>opentelemetry-logback-appender-1.0</artifactId>
-      <version>2.21.0-alpha</version>
+      <version>2.22.0-alpha</version>
     </dependency>
     <dependency>
       <groupId>io.dapr.spring</groupId>
