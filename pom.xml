@@ -28,23 +28,13 @@
       <artifactId>spring-boot-starter-webmvc</artifactId>
     </dependency>
     <dependency>
-      <groupId>io.opentelemetry.instrumentation</groupId>
-      <artifactId>opentelemetry-logback-appender-1.0</artifactId>
-      <version>2.22.0-alpha</version>
-    </dependency>
-    <dependency>
       <groupId>io.dapr.spring</groupId>
       <artifactId>dapr-spring-boot-4-starter</artifactId>
       <version>${dapr.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-opentelemetry</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-opentelemetry-test</artifactId>
-      <scope>test</scope>
+      <groupId>io.arconia</groupId>
+      <artifactId>arconia-opentelemetry-spring-boot-starter</artifactId>
     </dependency>
 
     <dependency>
@@ -74,6 +64,18 @@
 
 
   </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.arconia</groupId>
+        <artifactId>arconia-bom</artifactId>
+        <version>0.23.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <plugins>
