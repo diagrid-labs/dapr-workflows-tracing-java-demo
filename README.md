@@ -1,12 +1,12 @@
 # Dapr Workflows tracing demo (Java)
 
-Demonstrates end-to-end distributed tracing across a Spring Boot 4 Dapr Workflow application using the OpenTelemetry Java agent. Traces can be exported either to a local OTLP collector (Dapr OSS) or to a Dash0 backend through a Diagrid Catalyst project. Useful for developers who want to observe workflow and activity spans alongside Dapr sidecar telemetry.
+Demonstrates end-to-end distributed tracing across a Spring Boot 4 Dapr Workflow application using the OpenTelemetry Java agent. Traces can be exported either to a local OTLP collector (Dapr OSS) or to a Dash0 backend through a Diagrid project. Useful for developers who want to observe workflow and activity spans alongside Dapr sidecar telemetry.
 
 ## Prerequisites
 
 - Java 21
 - Maven (the project includes the Maven Wrapper, `./mvnw`)
-- Dapr CLI installed and initialized (`dapr init`) for the local-OTel path, or the Diagrid CLI logged in to a Catalyst project for the Catalyst path
+- Dapr CLI installed and initialized (`dapr init`) for the local-OTel path, or the Diagrid CLI logged in to a Diagrid project for the Diagrid path
 - An OTLP-compatible backend (the included scripts target Dash0; substitute your own endpoint if needed)
 - `OTEL_AUTH_TOKEN` exported as `Bearer <your-token>` before running either script
 
@@ -21,7 +21,7 @@ Demonstrates end-to-end distributed tracing across a Spring Boot 4 Dapr Workflow
    export OTEL_AUTH_TOKEN="Bearer <your-token>"
    ./run-with-otel.sh
    ```
-3. Or run against a Diagrid Catalyst project:
+3. Or run against a Diagrid project:
    ```
    export OTEL_AUTH_TOKEN="Bearer <your-token>"
    ./run-with-otel-catalyst.sh
@@ -34,7 +34,7 @@ Demonstrates end-to-end distributed tracing across a Spring Boot 4 Dapr Workflow
 - `src/main/java/...` — workflow, activity, and controller sources.
 - `src/main/resources/application.properties`, `logback-spring.xml` — Spring and logging configuration.
 - `run-with-otel.sh` — runs locally via `mvn spring-boot:test-run` with the OpenTelemetry Java agent (v2.14.0) attached.
-- `run-with-otel-catalyst.sh` — same, but wrapped in `diagrid dev run` so the app connects to a Catalyst project.
+- `run-with-otel-catalyst.sh` — same, but wrapped in `diagrid dev run` so the app connects to a Diagrid project.
 
 ## Related
 
